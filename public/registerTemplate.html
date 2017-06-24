@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Форма регистрации</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+	<div class="wrapper">
+		<div class="layout1">
+			<h1>Форма регистрации</h1>
+		</div>
+		<form action="register.php" method="POST">
+		<label class="register_field"><span class="register_span">Имя</span><input <?php if($errorField=="name"):?>class="marked"<?php endif;?> type="text" name="name" value=<?=$name;?>></label>
+		<label class="register_field"><span class="register_span">Фамилия</span><input <?php if($errorField=="surname"):?>class="marked"<?php endif;?> type="text" name="surname" value=<?=$surname;?>></label>
+		<label class="register_field">
+			<span class="register_span">Пол</span>
+			<select name="sex">
+				<option value=<?=Student::SEX_MALE?> <?php if($sex == Student::SEX_MALE):?> selected <?php endif;?> >Мужской</option>
+				<option value=<?=Student::SEX_FEMALE?> <?php if($sex == Student::SEX_FEMALE):?> selected <?php endif;?> >Женский</option>
+			</select>
+		</label>
+		<label class="register_field"><span class="register_span">Номер группы</span><input <?php if($errorField=="group"):?>class="marked"<?php endif;?> type="text" name="group" value=<?=$group;?>></label>
+		<label class="register_field"><span class="register_span">e-mail</span><input <?php if($errorField=="email"):?>class="marked"<?php endif;?> type="text" name="email" value=<?=$email;?>></label>
+		<label class="register_field"><span class="register_span">Суммарные баллы ЕГЭ</span><input <?php if($errorField=="points"):?>class="marked"<?php endif;?> type="text" name="points" value=<?=$points;?>></label>
+		<label class="register_field"><span class="register_span">Год рождения</span><input <?php if($errorField=="birth"):?>class="marked"<?php endif;?> type="text" name="birth" value=<?=$birth;?>></label>
+		<label class="register_field">
+			<span class="register_span">Место жительства</span>
+            <select name="location">
+                <option value=<?=Student::LOCATION_LOCAL?> <?php if($location == Student::LOCATION_LOCAL):?> selected <?php endif;?> >Местный</option>
+                <option value=<?=Student::LOCATION_NONRESIDENT?> <?php if($location == Student::LOCATION_NONRESIDENT):?> selected <?php endif;?> >Иногородний</option>
+            </select>
+		</label>
+		<div class="buttons">
+			<?php if($flag == true):?>
+				<label class="register_field"><input type="submit" name="create" value="Создать"></label>
+			<?php endif;?>
+			<?php if($flag == false):?>
+				<label class="register_field"><input type="submit" name="edit" value="Изменить"></label>
+			<?php endif;?>
+		</div>
+		</form>
+		<span class="errorMessage"><?php echo $errorMessage; ?></span>		
+	</div>	
+	</body>
+</html>
