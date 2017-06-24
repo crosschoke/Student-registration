@@ -1,0 +1,106 @@
+.register_field{
+	display: block;
+	margin-bottom: 20px;
+}
+
+.register_span{
+	vertical-align: top;
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+}
+
+.wrapper{
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+}
+
+.layout1{
+	margin-bottom: 40px;
+}
+
+.buttons{
+	padding-left: 75px;;
+}
+
+.marked{
+	background-color: rgb(255,183,183);
+}
+
+#find_form{
+	display: inline;
+}
+
+#find_field{
+	width: 90px;
+}
+
+#list{
+	margin-right: 100px;
+	font-size: 20px;
+}
+
+#find_span{
+	margin-right: 20px;
+}
+
+.mainWrapper{
+	margin-left: auto;
+	margin-right: auto;
+	width:550px;
+}
+
+.columns{
+	margin-top: 50px;
+}
+
+.name_column{
+	display: inline-block;
+	width: 130px;
+}
+
+.surname_column{
+	display: inline-block;
+	width: 100px;
+	margin-right: 70px;
+}
+
+.group_column{
+	display: inline-block;
+	width: 120px;
+}
+
+.points_column{
+	display: inline-block;
+	width: 80px;
+}
+
+#showAllButton{
+	margin-top: 10px;
+}
+
+#registerButton{
+	margin-top: 50px;
+	width: 200px;
+}
+
+.pageAncor{
+	margin-right: 10px;
+}
+
+.redirectMessage{
+	font-size: 30px;
+	font-weight: bold;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.errorMessage{
+	font-weight: bold;
+}
+
+
+
+
+
